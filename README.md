@@ -5,10 +5,16 @@ To get it locally run this...
 `git clone https://github.com/darekm101/dnstest.git`
 
 Once you downloaded it, let's setup the dependencies. 
-
+Change directory to where the repo is:
 `cd dnstest`
+
+Initilize vitrual environment for python 3.6
 `python3.6 -m venv venv`
+
+Activate the viritual environment
 `source venv/bin/activate`
+
+Install dependecies, pretty much python dns tools
 `pip install -r requirements.txt`
 
 #Run the test... 
