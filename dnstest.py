@@ -81,16 +81,19 @@ for dns_server in dns_servers:
     for host in host_list:
         forward_lookup_times.append(forward_lookup(host))
 
-    print(f"\n\nReverse Lookup Stats: ")
-    print(f"Total: {len(reverse_lookup_times)}")
-    print(f"Mean: {stats.mean(reverse_lookup_times)}")
-    print(f"Max: {max(reverse_lookup_times)}")
+    if host_list: 
+            
+        print(f"\n\nReverse Lookup Stats: ")
+        print(f"Total: {len(reverse_lookup_times)}")
+        print(f"Mean: {stats.mean(reverse_lookup_times)}")
+        print(f"Max: {max(reverse_lookup_times)}")
 
-    print(f"\nForward Lookup Stats: ")
-    print(f"Total: {len(forward_lookup_times)}")
-    print(f"Mean: {stats.mean(forward_lookup_times)}")
-    print(f"Max: {max(forward_lookup_times)}")
+        print(f"\nForward Lookup Stats: ")
+        print(f"Total: {len(forward_lookup_times)}")
+        print(f"Mean: {stats.mean(forward_lookup_times)}")
+        print(f"Max: {max(forward_lookup_times)}")
 
-    reset_stats()
-
+        reset_stats()
+    else:
+        print("That network space did not return a single reversere lookup, try different network segmet.")
 
